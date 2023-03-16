@@ -9,14 +9,10 @@
 
   <body>
     <header>
-      <h1>Recherche d'offres d'emploi</h1>
+      <h1>SpaceX Browser</h1>
 
       <p id="explication">
-        Cette page permet de rechercher des offres d'emploi via l'API publique
-        de <a href="https://www.indeed.fr/" target="_blank">indeed.fr</a>.<br />
-        Saisir le nom d'une ville, d'un poste, ... pour rechercher les postes
-        correspondants, et enregistrer vos recherches favorites pour les
-        retrouver facilement.
+        Cette page permet de rechercher un vol effectué par SpaceX. Vous pourrez alors consulter les informations sur le vol ou la mission, tel que l'équipage, le description...
       </p>
     </header>
     <hr />
@@ -58,18 +54,19 @@
         </div>
 
         <!-- Résultats de recherche -->
+        
+        <div id="bloc-resultats">
+          
+        </div>
+        <div id="information-resultats">
+
+        </div>
         <div id="bloc-gif-attente">
           <img
             src="images/attente-ajax.gif"
             alt="GIF Attente de résultats"
             width="50"
           />
-        </div>
-        <div id="bloc-resultats">
-          <p class="res">Résultat 1 ...</p>
-          <p class="res">Résultat 2 ...</p>
-          <p class="res">Résultat 3 ...</p>
-          <p class="info-vide">(Aucun résultat trouvé)</p>
         </div>
       </section>
 
@@ -83,36 +80,14 @@
           Cliquer sur une recherche favorite ci-dessus pour relancer celle-ci :
         </p>
         <ul id="liste-favoris">
-          <li>
-            <span title="Cliquer pour relancer la recherche">Grenoble</span>
-            <img
-              src="images/croix.svg"
-              alt="Icone pour supprimer le favori"
-              width="15"
-              title="Cliquer pour supprimer le favori"
-            />
-          </li>
-          <li>
-            <span title="Cliquer pour relancer la recherche">Lyon</span>
-            <img
-              src="images/croix.svg"
-              alt="Icone pour supprimer le favori"
-              width="15"
-              title="Cliquer pour supprimer le favori"
-            />
-          </li>
-          <li>
-            <span title="Cliquer pour relancer la recherhe.">Web</span>
-            <img
-              src="images/croix.svg"
-              alt="Icone pour supprimer le favori"
-              width="15"
-              title="Cliquer pour supprimer le favori"
-            />
-          </li>
         </ul>
-        <p class="info-vide">(Aucune recherche favorite)</p>
       </section>
     </main>
   </body>
+    <script src="./Scripts/Crew.js"></script>
+    <script src="./Scripts/Launch.js"></script>
+    <script src="./Scripts/CrewDAO.js"></script>
+    <script src="./Scripts/LaunchDAO.js"></script>
+    <script src="./Scripts/FavorisService.js"></script>
+    <script src="./Scripts/index.js"></script>
 </html>

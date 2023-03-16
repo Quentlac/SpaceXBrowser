@@ -59,6 +59,7 @@ h1 {
   margin: 0 auto;
   min-width: 450px;
   flex-direction: row;
+
 }
 
 #bloc-recherche > input[type="text"],
@@ -111,10 +112,24 @@ h1 {
   text-align: center;
 }
 
-#bloc-resultats p.res::before {
-  /* Affichage d'une flèche devant chaque résultat
-		(Cf. https://unicode-table.com/fr/21E8/ ) */
-  content: "\21E8\00A0";
+#bloc-resultats {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+#bloc-resultats p {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#bloc-resultats p:hover {
+  background-color: #00000055;
+}
+
+#information-resultats p {
+  width: fit-content;
 }
 
 /* Section de la barre de séparation */
@@ -165,4 +180,11 @@ h1 {
   #section-favoris {
     flex: 0;
   }
+}
+
+
+
+.match-word {
+  color: greenyellow;
+  font-weight: bold;
 }

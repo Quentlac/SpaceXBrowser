@@ -1,0 +1,73 @@
+
+html {
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+}
+
+.hlist {
+    display: flex;
+}
+
+.item {
+    margin: 5px;
+}
+
+aside {
+    width: 800px;
+    min-width: 500px;
+    background-color: black;
+    margin: 0;
+
+    height: 100%;
+
+    padding: 15px;
+}
+
+h1, h2 {
+    color: white;
+}
+
+.crew-item img {
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+}
+
+p {
+    color: white;
+    max-width: 600px;
+    text-align: justify;
+}
+
+#launch-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: start;
+    align-items: start;
+}
+
+#launch-gallery img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    margin: 10px;
+}
