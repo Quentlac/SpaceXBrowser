@@ -69,7 +69,7 @@ const view = {
         supprIcon.setAttribute('width', 15);
 
         supprIcon.addEventListener('click', (e) => {
-            models.favorisService.removeFavoris(fav);
+            removeFavoris();
             this.updateFavorisFromModel(models.favorisService);
         });
 
@@ -192,12 +192,18 @@ view.rechercheInput.addEventListener('input', e => {
     }
 });
 
+
+const removeFavoris = function(fav) {
+    if(confirm("Etes vous sûr de vouloir supprimer le favoris \'" + fav + "\" ?"))
+            models.favorisService.removeFavoris(fav);
+}
+
 view.favorisButton.addEventListener("click", (e) => {
 
     const recherche = view.getQueryInput();
 
     if(models.favorisService.exist(recherche)) {
-        models.favorisService.removeFavoris(recherche);
+        removeFavoris(recherche)
     }
     else {
         models.favorisService.addFavoris(recherche);
